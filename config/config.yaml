@@ -1,0 +1,23 @@
+# OJ 系统配置文件
+
+server:
+  host: "0.0.0.0"
+  port: 8080
+
+database:
+  host: "localhost"
+  port: 3306
+  user: ""                       # 留空则使用环境变量 $USER（配合 auth_socket）
+  password: ""                   # auth_socket 认证无需密码
+  name: "oj_system"
+  charset: "utf8mb4"
+  pool_size: 5                   # 连接池大小
+
+log:
+  level: "info"                  # debug / info / warning / error
+  file_path: "logs/oj.log"
+
+executor:
+  time_limit_sec: 5              # 单次运行超时（秒）
+  memory_limit_mb: 256           # 进程内存上限（MB）
+  compile_timeout_sec: 10        # 编译超时（秒）
